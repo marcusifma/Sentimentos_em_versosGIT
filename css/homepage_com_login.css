@@ -12,8 +12,8 @@
 
   font-family: "Poppins", sans-serif;
 }
-nav{
-    margin-bottom: -147px;
+nav {
+  margin-bottom: -147px;
 }
 body {
   background-color: #ffffff;
@@ -221,12 +221,12 @@ header {
     transition: 0.1s;
     transform: scale(0.9);
   } */
-.perfil_img{
-    margin-left: 20px;
-    margin-right: 65px;
-    margin-bottom: 129px;
-    margin-top: -5px;
-    width: 45px;
+.perfil_img {
+  margin-left: 20px;
+  margin-right: 65px;
+  margin-bottom: 129px;
+  margin-top: -5px;
+  width: 45px;
 }
 
 .img_fundo {
@@ -256,7 +256,7 @@ header {
   padding-top: 10px;
 }
 
-.façapedido{
+.façapedido {
   display: inline;
   position: absolute;
   left: 60px;

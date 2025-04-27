@@ -634,7 +634,7 @@ header {
   font-weight: 600;
   font-size: 20px;
   padding: 5px;
-  border-bottom: solid gray 1px ;  
+  border-bottom: solid gray 1px;
   position: relative;
   right: 50px;
 }
@@ -644,7 +644,7 @@ header {
   font-size: 20px;
   padding: 5px;
   border-top: solid gray 1px;
-  border-bottom: solid gray 1px ;  
+  border-bottom: solid gray 1px;
   position: relative;
   right: 50px;
 }
@@ -654,7 +654,7 @@ header {
   font-size: 20px;
   padding: 5px;
   border-top: solid gray 1px;
-  border-bottom: solid gray 1px ;  
+  border-bottom: solid gray 1px;
   position: relative;
   right: 50px;
 }
@@ -663,7 +663,7 @@ header {
   font-weight: 600;
   font-size: 20px;
   padding: 5px;
-  border-top: solid gray 1px;  
+  border-top: solid gray 1px;
   position: relative;
   right: 50px;
   margin-bottom: -3px;
@@ -684,7 +684,7 @@ header {
   margin-right: -60px;
   text-align: left;
   color: #ffffff;
-  background-color: #1EA2AB;
+  background-color: #1ea2ab;
   font-weight: 500;
   position: relative;
   top: -21px;
@@ -704,15 +704,15 @@ header {
   top: -70px;
   right: -11px;
 }
-.foto_compra{
-margin-left: -400px;
+.foto_compra {
+  margin-left: -400px;
 }
 .valor1 {
   font-weight: 300;
   font-size: 15px;
   padding: 2px;
- margin-right: 90px;
- margin-left: 90px;
+  margin-right: 90px;
+  margin-left: 90px;
   border-top: black solid 1px;
   border-bottom: black solid 1px;
   position: relative;
@@ -749,7 +749,8 @@ margin-left: -400px;
   top: -89px;
   right: -11px;
 }
-.valor3 { margin-right: 90px;
+.valor3 {
+  margin-right: 90px;
   margin-left: 90px;
   font-weight: 300;
   font-size: 15px;
@@ -770,7 +771,8 @@ margin-left: -400px;
   right: -11px;
   margin-bottom: -3px;
 }
-.valor4 { margin-right: 90px;
+.valor4 {
+  margin-right: 90px;
   margin-left: 90px;
   font-weight: 300;
   font-size: 15px;
@@ -781,11 +783,11 @@ margin-left: -400px;
   top: -79px;
   right: 70px;
 }
-.total{
+.total {
   margin-right: -60px;
   text-align: right;
   color: #ffffff;
-  background-color: #1EA2AB;
+  background-color: #1ea2ab;
   font-weight: 500;
   position: relative;
   top: 11px;

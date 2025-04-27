@@ -7,20 +7,20 @@
     <title>CADASTRO</title>
     <!-- link para o style -->
     <link rel="stylesheet" href="../css/cadastro.css" />
-    
-  <div vw class="enabled">
-    <div vw-access-button class="active">
-    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active">
+        </div>
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper">
             </div>
         </div>
-    </div> 
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
             <!-- <img class="menu_img" src="https://i.ibb.co/KrrRNzZ/Group-1.png" /> -->
         </nav>
     </header>
-    <img class="img_fundo" src="https://i.ibb.co/qNY7C4B/oeioeoe.png" />
+    <img class="img_fundo" src="https://i.ibb.co/1GX30PnZ/mainha.jpg" />
     <main>
         <section class="organizar">
             <div class="container">
@@ -112,35 +112,24 @@
                         "file:///C:/Users/Anthony/Documents/DeafEd/casdastro.html";
                 }
             </script>
-           <script>
-            function confirmar() {
-              Swal.fire({
-                title: "Atenção!",
-                text: "Ao contiunar sem login, vários recursos estarão desabilitados. Você deseja continuar?",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonText: "Sim, continuar",
-                cancelButtonText: "Cancelar",
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33"
-   }).then((result) =>  {
-    if (result.isConfirmed) {
-      window.location.href= "../index.html"; 
-    }
-   });
-  
-  
-                // const confirmar = confirm("Ao contiunar sem login, vários recursos estarão desabilitados. Você deseja continuar?");
-    
-                // if (confirmar) {
-                //     // Redireciona para outra página
-                //     window.location.href = "/index.html"; // Substitua pela URL da página de destino
-                // } else {
-                //     // Não faz nada, permanece na mesma página
-                //     return;
-                // }
-            }
-        </script>
+            <script>
+                function confirmar() {
+                    Swal.fire({
+                        title: "Atenção!",
+                        text: "Ao contiunar sem login, vários recursos estarão desabilitados. Você deseja continuar?",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonText: "Sim, continuar",
+                        cancelButtonText: "Cancelar",
+                        confirmButtonColor: "#8d5500",
+                        cancelButtonColor: "#d33"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = "../index.html";
+                        }
+                    });
+                }
+            </script>
         </section>
     </main>
 </body>

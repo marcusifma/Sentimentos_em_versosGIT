@@ -50,7 +50,8 @@ header {
   display: flex;
   align-items: center;
 }
-.homelink {  text-shadow: 1px 7px 5px rgba(0, 0, 0, 0.356);
+.homelink {
+  text-shadow: 1px 7px 5px rgba(0, 0, 0, 0.356);
   color: #ffffff;
   border-radius: 11px;
   padding-left: 10px;
@@ -106,8 +107,6 @@ header {
   right: 195px;
   font-size: 21px;
   text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.527);
-
-
 }
 .sobrelink:hover {
   background: fixed #ffffff;
@@ -142,7 +141,6 @@ header {
   transition: 0.6s;
 }
 .suportelink:hover {
-
   background: fixed #d3d3d3;
   border-radius: 11px;
   padding-left: 10px;
@@ -236,9 +234,9 @@ header {
   transform: scale(0.9);
 }
 .loginlink:active {
-    transition: 0.1s;
-    transform: scale(0.9);
-  }
+  transition: 0.1s;
+  transform: scale(0.9);
+}
 /* .menu_img{
     margin-left: 20px;
     margin-right: 65px;
@@ -246,154 +244,251 @@ header {
     width: 25px;
 } */
 /* provavelmente eu comecei de bem aqui */
-h2{
-  position:relative;
-  left: 100px;
+h2 {
   bottom: 20px;
   padding: 10px;
   font-size: 3rem;
   font-weight: 600;
   text-align: left;
-  margin: 8px;
+  margin-bottom: 14px;
+  margin-left: 70px;
   width: 500px;
   /* aqui eu mudei a posição da palavra " precisa de ajuda?" para ficar de baixo da "logo",aumentei o tamanho dele também
   */
 }
-input{
+input {
   position: relative;
   bottom: 30px;
-  left:-280px;
-  margin: 8px;
+
+  margin-left: 80px;
+  margin-top: 12px;
   width: 500px;
+
   /* aqui eu mudei a posição da barra de pesquisa para ficar em baixo do  "precisa de ajuda?" */
 }
-
-
+.botao_pesquisar {
+  position: relative;
+  padding: 2px;
+  padding-right: 5px;
+  bottom: 23px;
+  border: 1px solid #6f6f6f;
+  border-left: 0px;
+  background-color: #d9d9d9;
+}
+.botao_pesquisar:hover {
+  background-color: #c0c0c0;
+}
+.lupa_pesquisa {
+  position: relative;
+  bottom: -2px;
+}
 .conteiner {
-    padding: 20px;
-    text-align: center;
-  }
-  .problemasrecomendados{
-    position: absolute;
-    left: 100px;
-    font-size: 20px;
-    margin-top: -3px;
-    padding: 6px;
-    border-style: solid;
-    border-right:#101010;
-    border-top: #101010;
-    border-bottom: #101010;
-    /* aqui também mudei a posição*/
-  }
-  .topodapagina {
-    background-color: #865439;
-    color: white;
-    padding: 20px;
-    height: 150px;
+  padding: 20px;
+  text-align: center;
+}
+.problemasrecomendados {
+  position: absolute;
+  left: 100px;
+  font-size: 20px;
+  margin-top: -3px;
+  padding: 6px;
+  border-style: solid;
+  border-right: #101010;
+  border-top: #101010;
+  border-bottom: #101010;
+  /* aqui também mudei a posição*/
+}
+.topodapagina {
+  background-color: #865439;
+  color: white;
+  padding: 20px;
+  height: 150px;
   /* aqui eu devini a cor da div,a largura e outras coisas */
-   
-  }
-  .topodapagina input {
-    width: 50%;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    /* não lembro mas não vou mexer vai que de erro*/
-  }
-  .topicos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-    margin-left: 110px;
-    /* criei um contêiner de grade, para organizar elementos   colunas. criei 3 colunas iguais com um espaçamento */
-  }
-  .topicos div {
-    background-color: #F4F4F4;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #101010;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-left: 10px;
-    height: 160px;
-    /* mexi na borda,espaçamento,margir,largura etc... */
-  }
+}
+.topodapagina input {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  /* não lembro mas não vou mexer vai que de erro*/
+}
+.topicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 58px;
+  /* criei um contêiner de grade, para organizar elementos   colunas. criei 3 colunas iguais com um espaçamento */
+}
+.topicos div {
+  background-color: #f7f7f7;
+  padding: 50px;
+  text-align: center;
+  border: 0.2px solid #10101075;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 140px;
+  /* mexi na borda,espaçamento,margir,largura etc... */
+}
+
+.topicos div:hover {
+  background-color: #e9e9e9;
+  /* coloquei uma cor*/
+}
+.topicos img {
+  margin-bottom: 10px;
   
-  .topicos div:hover {
-    background-color: #E9E9E9;
-    /* coloquei uma cor*/
-  }
-  .topicos img {
-    margin-bottom: 10px;
-  }
-  .view-all {
-    text-decoration: none;
-    margin-top: 10px;
-    text-align: right;
-    
-  }
-  .view-all a {
-    color: black;
-    text-decoration: none;
-      font-weight: bold;
-
-
-  }
-  .topicos p{
-    color: black;
-    text-decoration: none;
-  }
-  .partedebaixo {
-    margin-top: 70px;
-    background-color: #865439;
-    color: white;
-    padding: 20px;
-    height: 300px;
-    /* aqui eu mexi na parte de baixo da página sendo elas:na margin,na cor, altura etc...*/
-  }
-  /* mexi na mesmas coisas da qui para baixo que foi colocar para a direita da margin */
-  .LOCALIZAÇÃO{
-    margin-left: 50px;
-  }
-  .LIGUE{
-    margin-left: 50px;
-  }
-  .relogio{
-    margin-left: -250px;
-    margin-top: -100px;
-    width: 30px;
-  }
-  .HORÁRIO{
-    margin-left: 50px;
-    margin-top: 10px;
-    
-  }
-  h4{
+}
+.view-all {
+  white-space: nowrap;
+  text-decoration: none;
+  position: absolute;
+  right: 70px;
+ margin-top: 20px;
+}
+.view-all a {
+  color: black;
+  text-decoration: none;
+}
+.topicos p {
+  color: black;
+  text-decoration: none;
+  font-size: 19px;
+}
+.partedebaixo {
+  margin-top: 70px;
+  background-color: #865439;
+  color: white;
+  padding: 20px;
+  height: 370px;
+  text-align: left;
+  z-index: 1;
+  /* aqui eu mexi na parte de baixo da página sendo elas:na margin,na cor, altura etc...*/
+}
+/* mexi na mesmas coisas da qui para baixo que foi colocar para a direita da margin */
+.informações {
+  margin-right: 800px;
+}
+.informações img{
+  filter: brightness(0) invert(1);
+  margin-left: -18px;
+}
+.informações h4{
+  font-weight: 400;
+  margin: 20px;
+  
+}
+/* .LIGUE {
+  margin-left: 50px;
+}
+.relogio {
+  margin-left: -250px;
+  margin-top: -100px;
+  width: 30px;
+}
+.HORÁRIO {
+  margin-left: 50px;
+  margin-top: 10px;
+} */
+.partedebaixo p {
+  font-size: 18px;
+  font-weight: 200;
+}
+h4 {
+  font-size: 23px;
   margin-left: 20px;
-  }
-  .logo_link{
-    text-decoration: none;
-  }
-  footer {
-    margin-top: 20px;
-    background-color: #512c12;
-    padding-bottom: 30px;
-  }
-  .nomeofc {
-    color: #ffffff;
-    font-weight: 200;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: -20px;
-  }
-  .numofc {
-    color: #ffffff;
-    font-weight: 200;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    display: inline;
-  }
+}
+.caixa_de_ctt{
+  background-color: white;
+  position: absolute;
+
+  left: 300px;
+  width: 30px;
+  height: 20px;
+  z-index: 2;
+}
+.texto_ctt{
+font-size: 42px;
+white-space: nowrap;
+font-weight: 500;
+margin-top: -225px;
+margin-left: -40px;
+}
+.nome_ctt{
+  margin-left: -25px;
+  margin-top: 80px;
+  border-bottom: 2px solid #242424;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+.email_ctt{
+  margin-top: 40px;
+  margin-left: -25px;
+  border-bottom: 2px solid #242424;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+.email_sv_ctt{
+  margin-top: 110px;
+  margin-left: -25px;
+  padding-left: 30px;
+  color: #6f6f6f;
+  text-align: left;
+  font-weight: 400;
+  border-bottom: 2px solid #242424;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+input[type="password"]::placeholder,
+input[type="email"]::placeholder,
+input[type="text"]::placeholder {
+  text-align: left;
+  position: absolute;
+  left: 30px;
+}
+.botao_ctt{
+  font-size: 20px;
+  margin-left: -320px;
+  margin-top: 26px;
+  padding: 8px;
+  width: 130px;
+  font-weight: 600;
+  background-color: white;
+}
+.botao_ctt:hover {
+  background-color: rgb(224, 224, 224);
+}
+.logo_link {
+  text-decoration: none;
+}
+footer {
+  margin-top: -350px;
+  background-color: #512c12;
+  padding-bottom: 30px;
+}
+.nomeofc {
+  color: #ffffff;
+  font-weight: 200;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: -20px;
+}
+.numofc {
+  color: #ffffff;
+  font-weight: 200;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline;
+}

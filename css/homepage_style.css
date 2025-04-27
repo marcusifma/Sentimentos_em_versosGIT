@@ -219,9 +219,9 @@ header {
   transform: scale(0.9);
 }
 .loginlink:active {
-    transition: 0.1s;
-    transform: scale(0.9);
-  }
+  transition: 0.1s;
+  transform: scale(0.9);
+}
 /* .menu_img{
     margin-left: 20px;
     margin-right: 65px;

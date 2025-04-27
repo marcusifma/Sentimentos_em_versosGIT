@@ -28,8 +28,8 @@
   margin-left: 56px;
   width: 62px;
 }
-nav{
-    margin-bottom: 28px;
+nav {
+  margin-bottom: 28px;
 }
 header {
   max-width: 100%;
@@ -79,7 +79,7 @@ header {
   transform: scale(0.9);
 }
 .nao_login {
-    background: none;
+  background: none;
   text-shadow: 1px 7px 5px rgba(0, 0, 0, 0.356);
   color: #ffffff;
   border-radius: 11px;
@@ -129,8 +129,9 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .img_fundo {
+  margin-bottom: -100px;
   width: 100%;
-  height: 100%;
+  height:100%;
 }
 .images {
   margin-left: 110px;
@@ -141,7 +142,7 @@ body {
 }
 section {
   position: absolute;
-  top: 25%;
+  top: 33%;
   margin-left: 20px;
   max-width: 500px; /* Define a largura máxima da section */
   max-height: 730px;
