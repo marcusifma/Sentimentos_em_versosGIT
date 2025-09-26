@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatar Problema na Entrega de Cordel</title>
+    <link rel="stylesheet" href="../css/suporte_entrega.css" />
+  </head>
+  <body>
+    <div class="form">
+      <div class="partecima">
+        <h1>Relate um Problema com a Entrega</h1>
+      </div>
+
+      <p>
+        Se você encontrou algum erro, problema técnico ou qualquer outra questão
+        relacionada à entrega, preencha o formulário abaixo.<br />
+        Sua contribuição é importante para mantermos a qualidade e a integridade
+        do nosso acervo.
+      </p>
+
+      <form>
+        <h4><label for="nome">Seu nome:</label></h4>
+        <input type="text" id="nome" name="nome" required />
+
+        <h4><label for="email">Seu e-mail:</label></h4>
+        <input type="email" id="email" name="email" required />
+
+        <h4><label for="telefone">Telefone para contato (opcional):</label></h4>
+        <input type="text" id="telefone" name="telefone" />
+
+        <h4><label for="data_compra">Data da compra:</label></h4>
+        <input type="date" id="data_compra" name="data_compra" />
+
+        <h4><label for="titulo">Título do cordel enviado:</label></h4>
+        <input type="text" id="titulo" name="titulo" required />
+
+        <h4>Tipo de problema encontrado:</h4>
+        <fieldset class="checkbox-group">
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Entrega atrasada"
+            />
+            A entrega está atrasada</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Cordel não chegou"
+            />
+            O cordel não chegou</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Produto danificado"
+            />
+            Produto danificado</label
+          >
+          <label
+            ><input type="checkbox" name="problemas[]" value="Produto errado" />
+            Produto errado (cordel diferente do pedido)</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Embalagem violada"
+            />
+            Embalagem violada</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Endereço errado"
+            />
+            Entregue no endereço errado</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Cordel incompleto"
+            />
+            Cordel incompleto ou faltando páginas</label
+          >
+          <label
+            ><input type="checkbox" name="problemas[]" value="Outro" />
+            Outro</label
+          >
+        </fieldset>
+
+        <h4><label for="descricao">Descrição detalhada do problema:</label></h4>
+        <textarea id="descricao" name="descricao" required></textarea>
+
+        <h4>
+          <label for="anexo">Anexar imagem ou print do erro (opcional):</label>
+        </h4>
+        <input type="file" id="anexo" name="anexo" accept="image/*" />
+
+        <button type="submit">Enviar Relato</button>
+      </form>
+    </div>
+  </body>
+</html>

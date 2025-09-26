@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relato de Acessibilidade</title>
+    <link rel="stylesheet" href="../css/suporte_acessiblidade.css" />
+  </head>
+  <body>
+    <div class="form">
+      <div class="partecima">
+        <h1>Relate um Problema de Acessibilidade</h1>
+      </div>
+
+      <p>
+        Se você encontrou algum erro, problema técnico ou qualquer questão
+        relacionada à acessibilidade, preencha o formulário abaixo.<br />
+        Sua contribuição é importante para mantermos a qualidade e
+        acessibilidade do nosso conteúdo.
+      </p>
+
+      <form>
+        <h4><label for="nome">Seu nome:</label></h4>
+        <input type="text" id="nome" name="nome" required />
+
+        <h4><label for="email">Seu e-mail:</label></h4>
+        <input type="email" id="email" name="email" required />
+
+        <h4><label for="telefone">Telefone para contato (opcional):</label></h4>
+        <input type="text" id="telefone" name="telefone" />
+
+        <h4>Tipo de problema encontrado:</h4>
+        <fieldset class="checkbox-group">
+          <label
+            ><input
+              type="checkbox"
+              name="problema"
+              value="Imagens sem descrição"
+            />
+            Imagens sem descrição (sem texto alternativo)</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problema"
+              value="Links inacessíveis"
+            />
+            Botões ou links inacessíveis por teclado</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problema"
+              value="Falta de contraste"
+            />
+            Falta de contraste entre texto e fundo</label
+          >
+          <label
+            ><input type="checkbox" name="problema" value="Leitor de tela" />
+            Leitor de tela não consegue interpretar o conteúdo</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problema"
+              value="Campos não identificáveis"
+            />
+            Campos de formulário não são identificáveis</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problema"
+              value="Vídeos sem legenda"
+            />
+            Vídeos sem legenda ou audiodescrição</label
+          >
+          <label
+            ><input type="checkbox" name="problema" value="Outro" /> Outro
+            (descreva abaixo)</label
+          >
+        </fieldset>
+
+        <h4><label for="descricao">Descrição detalhada do problema:</label></h4>
+        <textarea id="descricao" name="descricao" required></textarea>
+
+        <button type="submit">Enviar Relato</button>
+      </form>
+    </div>
+  </body>
+</html>

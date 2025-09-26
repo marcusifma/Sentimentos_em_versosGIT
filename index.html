@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentimentos em Versos_loja</title>
+    <!-- links para os styles -->
+
+    <link 
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/homepage_style.css" />
+
+    <!-- codigo para o vlibras, assitente para pessoas com deficincia auditiva -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <!-- logo -->
+      <a class="logo_link" href="../index.html">
+        <img
+          class="logo_img"
+          src="https://i.ibb.co/HfXr8qQ2/logo-nova-SV-removebg-preview.png"
+          alt="logo da empresa"
+        />
+        <h1 class="logo_nome">Sentimentos em Versos</h1>
+      </a>
+
+<div class="cabecalho" >
+        <div class="menu_div">
+        <input type="text" placeholder="pesquisar" />
+        <button class="botao_pesquisar">
+          <img
+            class="lupa_botao_pesquisa"
+            src="https://i.ibb.co/qLxkRYck/2866321-1.png"
+            alt="lupa que simboliza a pesquisa"
+          />
+        </button>
+</div>
+  <div class="menu" id="meuMenu">
+          <button>Categorias <span class="seta">^</span></button>
+          <div class="menu-content">
+            <a href="#">Cultura</a>
+            <a href="#">História</a>
+            <a href="#">Natureza</a>
+            <a href="#">Sentimentos</a>
+            <a href="#">Educação e Cidadania</a>
+            <a href="#">Fantasia</a>
+            <a href="#">Fábula</a>
+
+          </div>
+    </div>
+    <div class="menu2" >
+
+       <a class="Novidades">Novidades</a>
+       <a class="Ofertas">Ofertas</a>
+       <a class="Mais_Vdd">Mais Vendidos</a>
+        <span> <a href="/html/carrinho.html" style="color: #ffffff;">Carrinho</a></span> 
+         <a class="lojalink" href="index.html" style=" margin-right: 10px;" >LOJA</a>
+        <a class="suportelink" href="html/suporte.html" style=" margin-right: 20px;" >SUPORTE</a>
+      </div>
+      <nav>
+        <!-- links pras outras abas -->
+        <a class="loginlink" href="html/login(sv).html">LOGIN</a>
+      </div>
+      </nav>
+    </header>
+
+    
+
+    <!-- imagem do fundo do site -->
+
+<div class="carrossel">
+  <!-- apenas duas divs que revezam -->
+  <div class="img_fundo" id="slideA"></div>
+  <div class="img_fundo" id="slideB"></div>
+
+  <button class="btn prev" id="prevBtn">&#10094;</button>
+  <button class="btn next" id="nextBtn">&#10095;</button>
+</div>
+
+<script>
+  const imagens = [
+    "https://i.ibb.co/G33mYLdF/poi.png",
+    "https://i.ibb.co/b5FtnRMM/C-pia-de-promo-es.png",
+    "https://i.ibb.co/Q1Qz2xF/C-pia-de-promo-es.png"
+  ];
+  const AUTO_MS = 5000; // troque aqui para mudar o tempo (ms)
+
+  const slides = [document.getElementById('slideA'), document.getElementById('slideB')];
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  let index = 0;         // index da imagem mostrada atualmente
+  let visible = 0;       // qual das duas divs está visível: 0 = slideA, 1 = slideB
+  let animando = false;
+  let autoplay = null;
+
+  // inicializa posições e imagens
+  function init(){
+    slides[0].style.backgroundImage = `url(${imagens[0]})`;
+    slides[0].style.transform = 'translateX(0)';     // visível
+    slides[1].style.transform = 'translateX(100%)'; // offscreen à direita
+    // se quiser começar em outro index, ajustar aqui
+    startAutoplay();
+  }
+
+  // troca de slide: dir = 1 (próximo, anima da direita pra esquerda)
+  // dir = -1 (anterior, anima da esquerda pra direita)
+  function trocar(dir){
+    if(animando) return;
+    animando = true;
+
+    const proximoIndex = (index + (dir === 1 ? 1 : imagens.length - 1)) % imagens.length;
+    const atualEl = slides[visible];
+    const incomingEl = slides[1 - visible];
+
+    // prepara incoming offscreen (à direita se dir=1, à esquerda se dir=-1)
+    incomingEl.style.transition = 'none';
+    incomingEl.style.transform = `translateX(${dir * 100}%)`;
+    incomingEl.style.backgroundImage = `url(${imagens[proximoIndex]})`;
+
+    // forçar reflow para aplicar transform antes da animação
+    void incomingEl.offsetWidth;
+
+    // ativar transições
+    incomingEl.style.transition = 'transform .5s ease';
+    atualEl.style.transition = 'transform .5s ease';
+
+    // anima: atual sai para o lado oposto, incoming vem para 0
+    atualEl.style.transform = `translateX(${-dir * 100}%)`;
+    incomingEl.style.transform = 'translateX(0)';
+
+    // depois da animação, reposiciona o elemento que saiu para o lado de incoming (pra próxima vez)
+    setTimeout(() => {
+      // 'atualEl' agora ficou offscreen; reposiciona instantaneamente para o lado de incoming
+      atualEl.style.transition = 'none';
+      atualEl.style.transform = `translateX(${dir * 100}%)`; // pronto para a próxima entrada
+      // forçar reflow e restaurar transition
+      void atualEl.offsetWidth;
+      atualEl.style.transition = 'transform .5s ease';
+
+      // atualizar estado
+      visible = 1 - visible;
+      index = proximoIndex;
+      animando = false;
+    }, 520); // um pouco maior que .5s para garantir
+  }
+
+  // autoplay
+  function startAutoplay(){
+    stopAutoplay();
+    autoplay = setInterval(()=> trocar(1), AUTO_MS);
+  }
+  function stopAutoplay(){
+    if(autoplay) clearInterval(autoplay);
+    autoplay = null;
+  }
+  function resetAutoplay(){
+    startAutoplay();
+  }
+
+  // eventos dos botões
+  prevBtn.addEventListener('click', () => { trocar(-1); resetAutoplay(); });
+  nextBtn.addEventListener('click', () => { trocar(1); resetAutoplay(); });
+
+  // opcional: pausa ao passar o mouse
+  document.querySelector('.carrossel').addEventListener('mouseenter', stopAutoplay);
+  document.querySelector('.carrossel').addEventListener('mouseleave', startAutoplay);
+
+  // inicializa tudo
+  init();
+</script>
+      <br />
+    </div>
+
+  
+
+        <section class="centralizar">
+          <div class="catalogo_cordeis">
+            <div class="parte_do_fundo_catalogo">
+              <br />
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://i.ibb.co/d4vZzp2X/cordeu2-1.png"
+                  alt="cordel lavrados e cordéis"
+                />
+                <div class="livro_categoria">História</div>
+                <h1 class="cordel_titulo">Lavrados e Cordéis</h1>
+                <h1 class="cordel_preco">R$19,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://i.pinimg.com/originals/4a/73/c4/4a73c413b037d813cfa01652967d03d8.jpg"
+                  alt="Cordel As crônicas de fogo e gel, a guerra dos tonos"
+                />
+                <div class="livro_categoria">Fantasia</div>
+                <h1 class="cordel_titulo">A guerra dos tronos</h1>
+                <h1 class="cordel_preco">R$29,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://i.pinimg.com/originals/81/bf/ba/81bfbafaba269d02d357c9fa88e1a856.jpg"
+                  alt="cordel da inspiração cigana"
+                />
+                <div class="livro_categoria">Cultura</div>
+                <h1 class="cordel_titulo">Cigana</h1>
+                <h1 class="cordel_preco">R$19,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://i.pinimg.com/236x/8a/de/b7/8adeb7c44bf9295bff9d1de6c8733087.jpg"
+                  alt="Luta de um homem com um lobisomem"
+                />
+                <div class="livro_categoria">Fábula</div>
+                <h1 class="cordel_titulo_versao_menor">
+                  Luta de um homem <br />
+                  com um lobisomem
+                </h1>
+                <h1 class="cordel_preco">R$24,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <br />
+              <br />
+              <br />
+              <br />
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://barretocordel.wordpress.com/wp-content/uploads/2012/10/cordel-sobre-o-cangaceiro-lampiao.jpg"
+                  alt=" cordel lampião: paradoxo fascinante"
+                />
+                <div class="livro_categoria">História e Cultura</div>
+                <h1 class="cordel_titulo_versao_menor">
+                  Lampião: <br />
+                  Paradoxo fascinante
+                </h1>
+                <h1 class="cordel_preco">R$39,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWK0lXRcUQZJ6oS1M935FGBbK6AyJsR141bQ&s"
+                  alt="cordel A invasão holandesa"
+                />
+                <div class="livro_categoria">História</div>
+                <h1 class="cordel_titulo">A invasão holandesa</h1>
+                <h1 class="cordel_preco">R$19,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://i.pinimg.com/474x/3b/12/a1/3b12a1485b4f557d909ea3f854515ffb.jpg"
+                  alt="cordel A historinha aranha aurinha"
+                />
+                <div class="livro_categoria">Infantil</div>
+                <h1 class="cordel_titulo_versao_menor">
+                  A historinha da <br />
+                  aranha aurinha
+                </h1>
+                <h1 class="cordel_preco">R$29,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://imgv2-2-f.scribdassets.com/img/word_document/405821784/original/f24bf8d364/1?v=1"
+                  alt=" cordel Do sertão à sala de aula"
+                />
+                <div class="livro_categoria">Educação e Cidadania</div>
+                <h1 class="cordel_titulo_versao_menor">
+                  Do sertão à <br />
+                  sala de aula
+                </h1>
+                <h1 class="cordel_preco">R$24,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <br />
+              <br />
+              <br />
+              <br />
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://i.pinimg.com/474x/9c/71/a6/9c71a6f330d6310ad1d149064ce6b472.jpg"
+                  alt="cordel A festa da galinha"
+                />
+                <div class="livro_categoria">Fábula</div>
+                <h1 class="cordel_titulo">A festa da galinha</h1>
+                <h1 class="cordel_preco">R$34,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://globaleditora.com.br/capas/400/3370.jpg"
+                  alt=" cordel Educam e transformam"
+                />
+                <div class="livro_categoria">Educação e Cidadania</div>
+                <h1 class="cordel_titulo">Educam e transformam</h1>
+                <h1 class="cordel_preco">R$19,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://lunetas.com.br/wp-content/uploads/2021/01/sete-cordeis.jpg"
+                  alt="cordel Sete cordéis para sete cantigas"
+                />
+                <div class="livro_categoria">Sentimentos</div>
+                <h1 class="cordel_titulo_versao_menor">
+                  Sete cordéis para <br />
+                  sete cantigas
+                </h1>
+                <h1 class="cordel_preco">R$24,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://lugaresdememoria.com.br/wp-content/uploads/imported/s320/BLOG%2BLUGARES%2BDE%2BMEM%25C3%2593RIA%2B%2BMat%25C3%25A9ria%2BLiteratura%2Bde%2BCordel%2BFoto%2BDivulga%25C3%25A7%25C3%25A3o%2BABLC%2B1.png"
+                  alt="cordel Peleja"
+                />
+                <div class="livro_categoria">Sentimentos</div>
+                <h1 class="cordel_titulo">Peleja</h1>
+                <h1 class="cordel_preco">R$29,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <br />
+              <br />
+              <br />
+              <br />
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://www.editoralux.com.br/loja/wp-content/uploads/2025/06/capa-direito-civil-em-cordel.jpg"
+                  alt="cordel direito civil em cordel"
+                />
+                <div class="livro_categoria">Educação e Cidadania</div>
+                <h1 class="cordel_titulo">Direito civil</h1>
+                <h1 class="cordel_preco">R$29,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiK16p6QGusc1EGChbNFOnuKS28YaelMQFWhYgCgmfvMzJcqYejkxbIhdStPUIl1lDql02d9SwluFKV9scya9p6YF86P3X7g0cWZsDGVKgbZypytp8Skxi1ZI8-a4ecC9TLaIV_Sh0BUg/s1280/anderson+thaisa+capa.jpg"
+                  alt="o romance dos alagoano com a sergipana"
+                />
+                <div class="livro_categoria">Sentimentos</div>
+                <h1 class="cordel_titulo">O romance</h1>
+                <h1 class="cordel_preco">R$34,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://assets.puzzlefactory.com/puzzle/391/769/original.jpg"
+                  alt="cordel campos sagrados"
+                />
+                <div class="livro_categoria">Cultura</div>
+                <h1 class="cordel_titulo">Campos sagrados</h1>
+                <h1 class="cordel_preco">R$24,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+              <div class="fundo_cordel">
+                <img
+                  class="cordel"
+                  src="https://lh6.googleusercontent.com/proxy/QWTZ_6TKdvCFxSzFpAg7lgBcSvHmjA1QlaVWglPFxxPI_DdPcOXNFHyfCAklcqQ8fQCbTCIeoPF0A6Io"
+                  alt="cordel casa dos anjos"
+                />
+                <div class="livro_categoria">Natureza</div>
+                <h1 class="cordel_titulo">Casa dos anjos</h1>
+                <h1 class="cordel_preco">R$19,99</h1>
+                <h1 class="cordel_comprar">COMPRAR</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer style="background:#f2f2f2; padding:30px 0; font-family: Arial, sans-serif; ">
+  <div style="max-width:1200px; margin:auto; display:flex; justify-content:space-between; flex-wrap:wrap;">
+
+    <!-- Coluna 1 -->
+    <div style="flex:1; min-width:200px; margin:10px; text-align: left;">
+      <h4>Informações</h4>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li><a href="/html/sobre.html">Quem somos</a></li>
+        <li><a href="#">Prazos de entrega</a></li>
+        <li><a href="#">Segurança</a></li>
+        <li><a href="#">Política de privacidade</a></li>
+        <li><a href="#">Política de troca</a></li>
+        <li><a href="#">#Vem Para SV</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 2 -->
+    <div style="flex:1; min-width:200px; margin:10px; text-align: left; ">
+      <h4>Serviços ao cliente</h4>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li><a href="#">Fale conosco</a></li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Trabalhe conosco</a></li>
+        <li><a href="#">Revista</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 3 -->
+    <div style="flex:1; min-width:200px; margin:10px; text-align: left; ">
+      <h4>Minha conta</h4>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li><a href="#">Minha conta</a></li>
+        <li><a href="#">Histórico de pedidos</a></li>
+        <li><a href="#">Lista de desejos</a></li>
+        <li><a href="#">Informativo</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 4 -->
+    <div class="coluna_4_footer" style="flex:1; min-width:200px; margin:10px; text-align: left; ">
+      <h4>Fale conosco</h4>
+      <p>(19) 3208-1068</p>
+      <p><a href="mailto:sac@leitura.com.br">senti@emversps.com.br</a></p>
+      <p >De segunda a sexta-feira, das 8 às 17h (exceto feriados)</p>
+      <div class="coluna_4_footer">
+        <a href="#">Facebook</a> | 
+        <a href="#">Instagram</a> | 
+        <a href="#">YouTube</a> | 
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Faixa inferior -->
+  <div style="text-align:center; margin-top:30px; border-top:1px solid #ddd; padding-top:20px; font-size:14px;">
+    <p>Formas de pagamento:</p>
+    <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa"/>
+    <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard"/>
+    <img src="https://img.icons8.com/color/48/000000/amex.png" alt="Amex"/>
+    <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="Paypal"/>
+
+    <p style="margin-top:20px;">Nosso site é um marketplace e os preços podem variar entre as lojas. 
+    Os preços e condições de pagamento são exclusivos para compras via internet...</p>
+
+    <p>&copy; 2025 Sentimentos em Versos LTDA | Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+    <!-- <footer>
+      //rodapé
+      <h1 class="nomeofc">
+        SENTIMENTOS EM VERSOS - VERSOS QUE TOCAM SEU CORAÇÃO
+      </h1>
+
+<div class="coluna1_footer">
+      <h2>Informações</h2>
+      <li> <a href="html/sobre.html">Sobre nós</a></li>
+      <li> <a href="html/sobre.html">Como foi fundada</a></li>
+      <li> <a href="html/sobre.html">Segurança</a></li>
+      <li> <a href="html/sobre.html">Políticas de Privacidade</a></li>
+      <li> <a href="html/sobre.html">Sobre nós</a></li>
+      
+</div>
+      
+<div class="coluna2_footer">
+     
+    <h2>Ajuda</h2>  
+
+</div>
+
+<div class="coluna3_footer">
+
+     <h2>Fale conosco</h2>
+ 
+</div>
+
+      <h1 class="numofc">© 2024 SV</h1>
+    </footer> -->
+  </body>
+</html>

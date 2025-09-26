@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carrinho</title>
+    <!-- links para os styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/carrinho.css" />
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <!-- logo -->
+      <a class="logo_link" href="carrinho.html">
+        <img
+          class="logo_img"
+          src="https://i.ibb.co/HfXr8qQ2/logo-nova-SV-removebg-preview.png"
+        />
+        <h1 class="logo_nome">Sentimentos em Versos</h1>
+      </a>
+      <nav>
+        <!-- links pras outras abas -->
+        <a class="lojalink" href="../index.html">LOJA</a>
+        <a class="suportelink" href="/html/suporte.html">SUPORTE</a>
+        <a class="loginlink" href="/html/login(sv).html">LOGIN</a>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <div>
+      <div class="carrinho">
+        <div class="header">
+          <img
+            class="local_icon"
+            src="https://cdn-icons-png.flaticon.com/512/106/106121.png"
+            width="33px"
+          />
+          <img
+            class="ouvir_icon"
+            src="https://i.pinimg.com/474x/0a/d9/7e/0ad97e338aa2e1619543eb3bc20cb40f.jpg"
+            width="40px"
+          />
+          <div class="header-icons">
+            <span class="comprando"
+              >Você está comprando de: <br />
+              Sentimentos em Versos - Loja Oficial
+            </span>
+          </div>
+          <h2 class="titulo">Carrinho</h2>
+        </div>
+
+        <div class="produto">
+          <img
+            src="https://www.autografia.com.br/wp-content/uploads/2021/08/CAPA-VaralDeCordeis-14x21-290721.jpg"
+            width="60px"
+            alt="Cordel"
+          />
+          <div class="produto-info">
+            <h1 class="maisperto">Cordel, varal de Cordéis<br /></h1>
+            <h1 class="maisperto">impresso + Áudio descrição</h1>
+            <div class="quantidade">
+              <button>-</button>
+              <button>1</button>
+              <button>+</button>
+              <span>🔊</span>
+            </div>
+            <div class="valor"><strong>R$ 29,90</strong></div>
+          </div>
+        </div>
+
+        <div class="cupom">
+          <input type="text" placeholder=" Você possui um cupom? Insira aqui" />
+          <button>Aplicar</button>
+        </div>
+
+        <div class="entrega">
+          📦 Entrega prevista para:
+          <br />
+          <br />
+          <strong class="data"> 03 a 06 de Julho de 2025 </strong>
+        </div>
+
+        <div class="resumo">
+          <div><span>Subtotal</span><span>R$ 29,90</span></div>
+          <div><span>Desconto</span><span>- R$ 5,00</span></div>
+          <div><span>Frete</span><span>R$ 12,00</span></div>
+        </div>
+
+        <div class="total"><span>Total Geral:</span><span>R$ 36,90</span></div>
+
+        <div class="botoes">
+          <button class="continuar">Continuar Comprando</button>
+          <button class="finalizar">Finalizar a Compra</button>
+        </div>
+
+        <div class="qr">
+          <img
+            src="https://i.ibb.co/S7nQ3ZKg/Captura-de-tela-2025-06-29-183708.png"
+            alt="QR Code"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatar Problema na Loja</title>
+    <link rel="stylesheet" href="../css/suporte_loja.css" />
+  </head>
+  <body>
+    <div class="form">
+      <div class="partecima">
+        <h1>Relate um Problema com a Loja</h1>
+      </div>
+
+      <p>
+        Se você encontrou algum erro, problema técnico ou qualquer outra questão
+        relacionada à loja, preencha o formulário abaixo. Sua contribuição é
+        importante para mantermos a qualidade e a integridade do nosso acervo.
+      </p>
+      <form>
+        <h4><label for="nome">Seu nome:</label></h4>
+        <input type="text" id="nome" name="nome" required />
+
+        <h4><label for="email">Seu e-mail:</label></h4>
+        <input type="email" id="email" name="email" required />
+
+        <h4><label for="telefone">Telefone para contato (opcional):</label></h4>
+        <input type="tel" id="telefone" name="telefone" />
+
+        <fieldset class="checkbox-group">
+          <legend><strong>Carregamento da Página</strong></legend>
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Página lenta ou não carrega"
+            />
+            A página não abre ou carrega muito lentamente</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Imagens não aparecem"
+            />
+            Imagens não aparecem corretamente</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Layout desconfigurado"
+            />
+            Layout aparece desconfigurado</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Mensagem de erro"
+            />
+            Apareceu uma mensagem de erro (ex: 404, 500, etc.)</label
+          >
+        </fieldset>
+
+        <fieldset class="checkbox-group">
+          <legend><strong>Navegação e Busca</strong></legend>
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Não encontrou produto"
+            />
+            Não consegui encontrar o que procurava</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Filtros não funcionam"
+            />
+            Os filtros não funcionam</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Busca sem resultado"
+            />
+            A busca não retorna resultados</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Paginação não funciona"
+            />
+            A paginação não carrega os próximos produtos</label
+          >
+        </fieldset>
+
+        <fieldset class="checkbox-group">
+          <legend><strong>Visualização de Produtos</strong></legend>
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Informações erradas"
+            />
+            Informações do produto estão erradas ou incompletas</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Preço incorreto"
+            />
+            O preço está incorreto</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Produto indisponível"
+            />
+            Produto aparece como disponível, mas está indisponível</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Imagem do produto ausente"
+            />
+            A imagem do produto não aparece</label
+          >
+        </fieldset>
+
+        <fieldset class="checkbox-group">
+          <legend><strong>Carrinho e Compra</strong></legend>
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Não adiciona produto"
+            />
+            Não consegui adicionar produtos ao carrinho</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Frete incorreto"
+            />
+            O valor do frete está incorreto</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Botão finalizar com erro"
+            />
+            O botão “Finalizar compra” não funciona</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="problemas[]"
+              value="Problema no pagamento"
+            />
+            Tive problemas com o pagamento</label
+          >
+          <label
+            ><input type="checkbox" name="problemas[]" value="Outro" />
+            Outro</label
+          >
+        </fieldset>
+
+        <h4><label for="descricao">Descrição detalhada do problema:</label></h4>
+        <textarea id="descricao" name="descricao" required></textarea>
+
+        <h4>
+          <label for="anexo">Anexar imagem ou print do erro (opcional):</label>
+        </h4>
+        <input type="file" id="anexo" name="anexo" accept="image/*" />
+
+        <button type="submit">Enviar Relato</button>
+      </form>
+    </div>
+  </body>
+</html>

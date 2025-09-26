@@ -1,0 +1,648 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+* {
+  /* tag css que seleciona o css inteiro */
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-size: medium;
+  text-decoration: none;
+  outline: none;
+
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-shadow: 1px 7px 5px rgba(0, 0, 0, 0.356);
+}
+.logo_link{
+  top: 0px;
+  position: absolute;
+  left: -15px;
+}
+.logo_nome {
+  display: inline;
+  vertical-align: 31px;
+  color: #ffffff;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 24px;
+  text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.295);
+}
+.logo_img {
+  display: inline;
+  margin-top: 0px;
+  margin-bottom: -10px;
+  margin-left: 50px;
+    margin-right: 10px;
+  width: 95px;
+}
+nav {
+  margin-bottom: 28px;
+}
+header {
+  max-width: 100%;
+  text-align: center;
+  background-color: #512c12;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.lojalink {
+  background: fixed #ffffff;
+  border-radius: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2.5px;
+  padding-bottom: 2px;
+  color: #65522e;
+  font-weight: 300;
+  text-decoration: none;
+  position: absolute;
+  text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.527);
+  right: 136px;
+  top: -50px;
+  font-size: 21px;
+}
+.suportelink {
+  text-shadow: 1px 7px 5px rgba(0, 0, 0, 0.356);
+  color: #ffffff;
+  border-radius: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2.5px;
+  padding-bottom: 2px;
+  font-weight: 300;
+  text-decoration: none;
+  position: absolute;
+  top: -50px;
+  right: 15px;
+  font-size: 21px;
+}
+.lojalink:hover {
+  background: fixed #d3d3d3;
+  border-radius: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2.5px;
+  padding-bottom: 2px;
+  color: #8b6826;
+  font-weight: 300;
+  text-decoration: none;
+  position: absolute;
+  right: 136px;
+  top: -50px;
+
+  text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.527);
+  transition: 0.6s;
+}
+.suportelink:hover {
+  background: fixed #ffffff;
+  border-radius: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2.5px;
+  padding-bottom: 2px;
+  color: #65522e;
+  font-weight: 300;
+  text-decoration: none;
+  position: absolute;
+  top: -50px;
+  right: 15px;
+
+  text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.527);
+  transition: 0.6s;
+}
+.loginlink {
+  text-shadow: 1px 7px 5px rgba(0, 0, 0, 0.356);
+  color: #ffffff;
+  border-radius: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2.5px;
+  padding-bottom: 2px;
+  font-weight: 300;
+  text-decoration: none;
+  position: absolute;
+  right: 50px;
+  top: 40px;
+  margin-top: -8px;
+  font-size: 18px;
+}
+.loginlink:hover {
+  background: fixed #ffffff;
+  border-radius: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2.5px;
+  padding-bottom: 2px;
+  color: #65522e;
+  font-weight: 300;
+  text-decoration: none;
+  position: absolute;
+  right: 50px;
+  margin-top: -8px;
+  text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.527);
+  transition: 0.6s;
+}
+.lojalink:active {
+  transition: 0.1s;
+  transform: scale(0.9);
+}
+.suportelink:active {
+  transition: 0.1s;
+  transform: scale(0.9);
+}
+.loginlink:active {
+  transition: 0.1s;
+  transform: scale(0.9);
+}
+
+ .carrossel{
+    width: 100%;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+    background:#000;
+  }
+
+  /* Usei a sua classe .img_fundo para manter compatibilidade */
+  .img_fundo{
+    position:absolute;
+    inset:0; /* top:0;right:0;bottom:0;left:0 */
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    transform:translateX(100%); /* por padrão offscreen à direita */
+    transition:transform .5s ease;
+    will-change:transform;
+  }
+
+  /* botões simples */
+  .btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:10;
+    background:rgba(0,0,0,.45);
+    color:#fff;
+    border:0;
+    padding:8px 12px;
+    cursor:pointer;
+    border-radius:6px;
+    font-size:20px;
+    user-select:none;
+  }
+  .btn:hover{background:rgba(0,0,0,.65)}
+  .prev{left:12px}
+  .next{right:12px}
+
+  /* opcional: desabilita seleção ao clicar rápido */
+  .btn:active{transform:translateY(-50%) scale(.98)}
+
+/* 
+
+
+.img_fundo {
+  background-image: url(https://i.ibb.co/G33mYLdF/poi.png);
+  https://i.ibb.co/G33mYLdF/poi.png
+  https://i.ibb.co/pBjwwktV/097.png
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+} */
+.parte_do_fundo_catalogo {
+  width: 99%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.fundo_cordel {
+  margin-left: 14px;
+  display: inline-block;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding-top: 11px;
+  padding-left: 60px;
+  padding-bottom: 15px;
+   max-width: 260px;
+  max-height: 409px;
+}
+.livro_categoria{
+  background-color: #00000085;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 2px;
+  margin-left: -60px;
+  position: relative;
+}
+.cordel{
+  margin-top: -5px;
+  width: 178px;
+  height: 257px;
+  object-fit: contain;
+  position: relative;
+  bottom: -15px;
+  right: 30px;
+}
+.cordel_titulo {
+  margin-top: 5px;
+  font-family: "Indie Flower", serif;
+  font-size: 22px;
+  font-weight: 300;
+  position: relative;
+  right: 30px;
+}
+.cordel_titulo_versao_menor{
+  margin-top: 5px;
+  font-family: "Indie Flower", serif;
+  line-height: 1.0;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  right: 30px;
+}
+.cordel_preco {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(44, 44, 44);
+  font-family: "Montserrat", sans-serif;
+  padding: 2px;
+  position: relative;
+  right: 30px;
+}
+.cordel_comprar {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  background-color: #3c5dab;
+  border-radius: 5px;
+  padding: 5px;
+  position: relative;
+  margin-top: 8px;
+  right: 30px;
+}
+/* footer {
+  margin-top: 600px;
+  background-color: #66666666;
+  padding-bottom: 30px;
+}
+.nomeofc {
+  color: #000000;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: -20px;
+}
+.numofc {
+  color: #000000;
+  font-weight: 200;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline;
+} */
+.botao_pesquisar{
+  border: 1px solid #352612;
+  border-left:none ;
+  width: 40px;
+  height: 41px;
+   position: relative;
+  right: 190px;
+  top: 8.3px;
+  background-color: #ffffff;
+  margin-left: -6px;
+  text-align: center; 
+  padding: 3px 7px;
+}
+.botao_pesquisar:hover {
+  transition: 0.5s;
+  border-color: #352612;
+  border-left: none;
+  box-shadow: 0 0 6px rgba(49, 33, 19, 0.5);
+}
+.lupa_botao_pesquisa{
+   width: 25px;
+   position: absolute;
+   right: 8px;
+   bottom: 9px;
+}
+input[type="text"]::placeholder {
+  text-align: left;
+  position: absolute;
+  top: 7px;
+  left: 25px;
+}
+input[type="text"]:focus {
+    transition: 0.5s;
+  border-color: #352612;
+  box-shadow: 0 0 6px rgba(49, 33, 19, 0.5);
+}
+input[type="text"]{
+  position: relative;
+  right: 190px;
+  top: -3px;
+  padding: 6px;
+  padding-left: 19px;
+   border: 1px solid #000000;
+    width: 300px;
+      height: 27px;
+    border-radius: 0px; 
+}
+  .cabecalho{
+    
+  margin-top: -80px;
+}
+  .menu_div{
+  position: relative;
+ margin-bottom: 5px; 
+ left: 97px;
+ top: 103px;
+
+}
+  .menu_div a{
+  text-decoration: none;
+  color: black;
+ text-shadow: none;
+  font-size: 18px;
+margin-left: 20px;
+margin-right: 50px;
+}
+  .menu {
+    position: relative; /* referência para o dropdown */
+    display: inline-block;
+    right: 215px;
+    top: 97px;
+
+}
+  .menu button {
+    margin-right: -10px;
+     text-shadow: none;
+  font-size: 18px;
+  color: white;
+    padding: 10px;
+background-color: #ffffff00;
+    border: none; 
+    cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    width: 150px;
+  }
+  .menu button:hover{
+     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .seta { transition: .3s; 
+    margin-bottom: -4px;
+  margin-right: 10px;
+  }
+
+  .menu-content {
+  
+    position: absolute;
+    top: 100%; left: 0;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    max-height: 0; transition: .3s;
+    z-index: 1000; /* fica sobre o resto */
+    width: 107%;
+  }
+
+  .menu-content a {
+    display: block; padding: 10px;
+    color: #333; text-decoration: none;
+    text-align: left;
+    margin-left: -2px;
+      line-height: 1.0;
+    font-size: 14px;
+  }
+  .menu-content a:hover { 
+    background: #e0e0e0; 
+  }
+   .menu:hover .menu-content {
+    max-height: 300px; /* altura pra exibir */
+  }
+  .menu:hover .seta {
+     transform: rotate(180deg);
+   }
+
+  .menu2{
+    position: relative; /* referência para o dropdown */
+    top: 60px;
+    left: 110px;
+    gap: 30px; 
+    color: #ffffff;
+    font-weight: 400;
+  }
+    .menu2 a{
+      font-size: 18px;
+      margin-right: 20px;
+    }
+  
+  .botao_carrinho {
+    margin-right: -70px;
+    position: sticky;
+    top: 20px; /* distância da borda superior */
+    padding: 8px 12px;
+    background: #ffffff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+   .botao_carrinho img{
+    position: relative;
+    top: 3px;
+   }
+  span{
+    margin-right: 22px;
+  }
+   /* Botão para abrir o menu */
+  .btn-abrir {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Menu lateral */
+  .menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -400px; /* escondido fora da tela */
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+    transition: right 0.4s ease;
+    z-index: 1000;
+    padding: 20px;
+  }
+
+  .menu-lateral.ativo {
+    right: 0; /* entra na tela */
+  }
+
+  /* Botão de fechar */
+  .btn-fechar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  /* Conteúdo do menu */
+  .menu-lateral h2 {
+    font-size: 20px;
+    color: #333;
+  }
+  .menu-lateral ul {
+    list-style: none;
+    padding: 0;
+  }
+  .menu-lateral li {
+    margin: 15px 0;
+    margin-left: 30px;
+        margin-top: -60px;
+  }
+  .menu-lateral a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+  }
+  .menu-lateral img{
+position: relative;
+top:20px;
+right: 120px;
+  }
+   .quantidade {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 5px;
+      margin-left: 43px;
+    }
+
+    .quantidade button {
+      margin: -3px;
+      border-radius: 0px;
+      border: solid 1px;
+      width: 25px;
+      height: 25px;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    /* h4{ 
+      padding-top: 10px;
+      border-top: 1px solid black;
+      position: relative;
+      top: 380px;
+      word-spacing: 130px;
+      font-size: 18px;
+    } */
+    h3{
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      padding-top: 10px;
+      padding-bottom: 15px;
+      margin-top: -px;
+      margin-left: -20px;
+      margin-right: -20px;
+      position: relative;
+      top: 390px;
+      font-size: 20px;
+      background-color: #512c12;
+      color: rgb(255, 255, 255);
+    }
+   footer a{
+      text-decoration: none;
+      color: #363636;
+     
+    }
+    footer a:hover{
+      text-decoration: underline;
+          color: #5f5f5f;
+           transition: 0.5s;
+    }
+    .coluna_4_footer p a {
+       text-decoration: none;
+      color: #363636;
+    }
+        .coluna_4_footer a {
+       text-decoration: none;
+      color: #363636;
+    }
+    footer{
+      color:#000000;
+    }
+
+      @media (max-width: 1400px) {
+      .logo_link{
+  top: 0px;
+  position: absolute;
+  left: -15px;
+}
+.logo_nome {
+  display: inline;
+  vertical-align: 31px;
+  color: #ffffff;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 20px;
+  text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.295);
+}
+.logo_img {
+  display: inline;
+  margin-top: 0px;
+  margin-bottom: -10px;
+  margin-left: 50px;
+    margin-right: 10px;
+  width: 95px;
+}
+ .carrossel{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background:#000;
+  }
+    }
+     @media (max-width: 1700px) {
+ .carrossel{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background:#000;
+  }
+    }
+    
+        
+     @media (max-width: 1800px) {
+ .carrossel{
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    background:#000;
+  }
+    }
