@@ -24,100 +24,216 @@
     </script>
   </head>
 
-  <body>
-    <header>
+<body>
+  <header>
       <!-- logo -->
-      <a class="logo_link" href="carrinho.html">
+      <a class="logo_link" href="../index.html">
         <img
           class="logo_img"
           src="https://i.ibb.co/HfXr8qQ2/logo-nova-SV-removebg-preview.png"
+          alt="logo da empresa"
         />
         <h1 class="logo_nome">Sentimentos em Versos</h1>
       </a>
+
+<div class="cabecalho" >
+        <div class="menu_div">
+        <input type="text" placeholder="pesquisar" />
+        <button class="botao_pesquisar">
+          <img
+            class="lupa_botao_pesquisa"
+            src="https://i.ibb.co/qLxkRYck/2866321-1.png"
+            alt="lupa que simboliza a pesquisa"
+          />
+        </button>
+</div>
+  <div class="menu" id="meuMenu">
+          <button>Categorias <span class="seta">^</span></button>
+          <div class="menu-content">
+            <a href="#">Cultura</a>
+            <a href="#">História</a>
+            <a href="#">Natureza</a>
+            <a href="#">Sentimentos</a>
+            <a href="#">Educação e Cidadania</a>
+            <a href="#">Fantasia</a>
+            <a href="#">Fábula</a>
+
+          </div>
+    </div>
+    <div class="menu2" >
+
+       <a class="Novidades">Novidades</a>
+       <a class="Ofertas">Ofertas</a>
+       <a class="Mais_Vdd">Mais Vendidos</a>
+        <span> <a href="/html/carrinho.html" style="color: #ffffff;">Carrinho</a></span> 
+         <a class="lojalink" href="/index.html" style=" margin-right: 10px;" >LOJA</a>
+        <a class="suportelink" href="suporte.html" style=" margin-right: 20px;" >SUPORTE</a>
+      </div>
       <nav>
         <!-- links pras outras abas -->
-        <a class="lojalink" href="../index.html">LOJA</a>
-        <a class="suportelink" href="/html/suporte.html">SUPORTE</a>
-        <a class="loginlink" href="/html/login(sv).html">LOGIN</a>
+        <a class="loginlink" href="login_sv.html">LOGIN</a>
+      </div>
       </nav>
     </header>
-    <br />
-    <br />
-    <div>
-      <div class="carrinho">
-        <div class="header">
-          <img
-            class="local_icon"
-            src="https://cdn-icons-png.flaticon.com/512/106/106121.png"
-            width="33px"
-          />
-          <img
-            class="ouvir_icon"
-            src="https://i.pinimg.com/474x/0a/d9/7e/0ad97e338aa2e1619543eb3bc20cb40f.jpg"
-            width="40px"
-          />
-          <div class="header-icons">
-            <span class="comprando"
-              >Você está comprando de: <br />
-              Sentimentos em Versos - Loja Oficial
-            </span>
+  <div class="container">
+  
+      <h1 class="carrinho_titulo">Carrinho de Compras</h1>
+
+    <main class="card">
+
+<div id="emptyMsg" class="empty hidden">
+  <h2>Seu carrinho está vazio</h2>
+  <a href="/index.html" class="btn">Ir para a loja</a>
+</div>
+
+ <div class="info-extra">
+        <p><strong>Data de criação:</strong> <span id="dataCriacao"></span></p>
+        <p><strong>Status:</strong> <span id="status">aberto</span></p>
+      </div>
+
+      <div class="item">
+        <div class="thumb">
+          <img src="cordel.png" alt="produto"/>
+        </div>
+        <div class="title">O Cordel Encantado</div>
+
+        <div class="controls">
+          <div class="qty">
+            <button id="minus">-</button>
+            <div id="count">1</div>
+            <button id="plus">+</button>
           </div>
-          <h2 class="titulo">Carrinho</h2>
-        </div>
-
-        <div class="produto">
-          <img
-            src="https://www.autografia.com.br/wp-content/uploads/2021/08/CAPA-VaralDeCordeis-14x21-290721.jpg"
-            width="60px"
-            alt="Cordel"
-          />
-          <div class="produto-info">
-            <h1 class="maisperto">Cordel, varal de Cordéis<br /></h1>
-            <h1 class="maisperto">impresso + Áudio descrição</h1>
-            <div class="quantidade">
-              <button>-</button>
-              <button>1</button>
-              <button>+</button>
-              <span>🔊</span>
-            </div>
-            <div class="valor"><strong>R$ 29,90</strong></div>
-          </div>
-        </div>
-
-        <div class="cupom">
-          <input type="text" placeholder=" Você possui um cupom? Insira aqui" />
-          <button>Aplicar</button>
-        </div>
-
-        <div class="entrega">
-          📦 Entrega prevista para:
-          <br />
-          <br />
-          <strong class="data"> 03 a 06 de Julho de 2025 </strong>
-        </div>
-
-        <div class="resumo">
-          <div><span>Subtotal</span><span>R$ 29,90</span></div>
-          <div><span>Desconto</span><span>- R$ 5,00</span></div>
-          <div><span>Frete</span><span>R$ 12,00</span></div>
-        </div>
-
-        <div class="total"><span>Total Geral:</span><span>R$ 36,90</span></div>
-
-        <div class="botoes">
-          <button class="continuar">Continuar Comprando</button>
-          <button class="finalizar">Finalizar a Compra</button>
-        </div>
-
-        <div class="qr">
-          <img
-            src="https://i.ibb.co/S7nQ3ZKg/Captura-de-tela-2025-06-29-183708.png"
-            alt="QR Code"
-          />
+          <div class="remove" id="remove">Remover</div>
         </div>
       </div>
-    </div>
-    <br />
-    <br />
-  </body>
+
+      <div class="total-row">
+        <div class="label">Total</div>
+        <div class="price" id="price">R$30</div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="decor"></div>
+ <a class="btn" id="finalizarCompra" href="#">Finalizar compra</a>
+      <div class="decor"></div>
+    </footer>
+  </div>
+  <img src="https://i.ibb.co/6JNzzZMX/Captura-de-tela-2025-11-23-154035.png" width="120px" style="margin-right: 1010px;">
+  <img src="https://i.ibb.co/xKWbkp2G/Captura-de-tela-2025-11-23-154115.png" width="120px">
+<br><br>
+<br>
+<br>
+<br>
+
+ <script>
+// ----- DATA DE CRIAÇÃO -----
+const criarData = () => {
+  const agora = new Date();
+  const formato = agora.toLocaleString("pt-BR", {
+    dateStyle: "short",
+    timeStyle: "short"
+  });
+  document.getElementById("dataCriacao").textContent = formato;
+};
+criarData();
+
+
+// ----- CARREGAR CARRINHO -----
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+const containerCarrinho = document.querySelector("main.card");
+const emptyMsg = document.getElementById("emptyMsg");
+const totalRow = document.querySelector(".total-row");
+const priceEl = document.getElementById("price");
+const statusEl = document.getElementById("status");
+const finalizarBtn = document.getElementById("finalizarCompra");
+
+// REMOVE O ITEM EXEMPLO QUE VEIO NO HTML
+document.querySelector(".item").remove();
+
+
+// ====== FUNÇÃO PARA RENDERIZAR OS ITENS ======
+function renderCarrinho() {
+  containerCarrinho.querySelectorAll(".item").forEach(i => i.remove());
+
+  if (carrinho.length === 0) {
+    emptyMsg.classList.remove("hidden");
+    totalRow.style.display = "none";
+    finalizarBtn.style.display = "none";
+    statusEl.textContent = "cancelado";
+    priceEl.textContent = "R$0,00";
+    return;
+  }
+
+  emptyMsg.classList.add("hidden");
+  totalRow.style.display = "flex";
+  finalizarBtn.style.display = "block";
+  statusEl.textContent = "aberto";
+
+  let total = 0;
+
+  carrinho.forEach((produto, index) => {
+    total += produto.price * produto.qtd;
+
+    const itemHTML = document.createElement("div");
+    itemHTML.classList.add("item");
+
+    itemHTML.innerHTML = `
+      <div class="thumb">
+        <img src="${produto.img}" alt="${produto.name}"/>
+      </div>
+
+      <div class="title">${produto.name}</div>
+
+      <div class="controls">
+        <div class="qty">
+          <button class="minus">-</button>
+          <div class="count">${produto.qtd}</div>
+          <button class="plus">+</button>
+        </div>
+        <div class="remove">Remover</div>
+      </div>
+    `;
+
+    // EVENTOS
+    itemHTML.querySelector(".plus").onclick = () => {
+      produto.qtd++;
+      salvarCarrinho();
+      renderCarrinho();
+    };
+
+    itemHTML.querySelector(".minus").onclick = () => {
+      if (produto.qtd > 1) {
+        produto.qtd--;
+        salvarCarrinho();
+        renderCarrinho();
+      }
+    };
+
+    itemHTML.querySelector(".remove").onclick = () => {
+      carrinho.splice(index, 1);
+      salvarCarrinho();
+      renderCarrinho();
+    };
+
+    containerCarrinho.appendChild(itemHTML);
+  });
+
+  priceEl.textContent = "R$ " + total.toFixed(2).replace(".", ",");
+}
+
+
+// ------- SALVAR NO STORAGE -------
+function salvarCarrinho() {
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+}
+
+
+// ------- INICIALIZA -------
+renderCarrinho();
+
+</script>
+
+</body>
 </html>

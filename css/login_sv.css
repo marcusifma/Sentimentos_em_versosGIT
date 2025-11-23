@@ -45,7 +45,7 @@ header {
   align-items: center;
 }
 
-.loginlink {
+.cadastrolink {
   text-shadow: 1px 7px 5px rgba(0, 0, 0, 0.356);
   color: #ffffff;
   border-radius: 11px;
@@ -59,7 +59,7 @@ header {
   right: 355px;
   font-size: 19px;
 }
-.loginlink:hover {
+.cadastrolink:hover {
   background: fixed #ffffff;
   border-radius: 11px;
   padding-left: 10px;
@@ -75,7 +75,7 @@ header {
   text-shadow: 0px 7px 5px rgba(0, 0, 0, 0.527);
   transition: 0.6s;
 }
-.loginlink:active {
+.cadastrolink:active {
   transition: 0.1s;
   transform: scale(0.9);
 }
@@ -149,36 +149,33 @@ section {
   transform: scale(0.9); /* reduz 90% do tamanho original */
   transform-origin: top left; /* garante que a redução não fique desalinhada */
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: -20px;
   margin-left: 20px;
   max-width: 800px; /* Define a largura máxima da section */
   max-height: 730px;
   padding: 20px;
   background-color: #ffffff;
-
 }
 .container {
-width: 300px;
+width: 350px;
   margin: 30px;
   margin-top: -0px;
   padding-top: 10px;
   border-radius: 5px;
 }
-.facacadastro { 
-  margin-top: -10px;
+.facalogin {
   color: #000000;
-  font-size: 23px;
+  font-size: 28px;
   text-align: center;
 }
 input[type="password"],
 input[type="text"],
-input[type="email"],
-input[type="tel"] {
+input[type="email"] {
   color: #000000;
   width: 100%;
   padding: 20px;
-  margin: 4px 0;
+  margin: 10px 0;
   border-bottom: 1px solid #242424;
   border-left: 0px;
   border-right: 0px;
@@ -188,12 +185,10 @@ input[type="tel"] {
 }
 input[type="password"]::placeholder,
 input[type="email"]::placeholder,
-input[type="text"]::placeholder,
-input[type="tel"]::placeholder {
+input[type="text"]::placeholder {
   text-align: left;
   position: absolute;
   left: 3px;
-  font-size: 15px;
   color: #535353;
 }
 textarea:focus,
@@ -201,23 +196,20 @@ input:focus,
 select:focus {
   outline: 0;
 }
-.mostrar-senha {
-   color: #000000;
+.mostrar {
+  color: #000000;
+  font-size: 14px;
   font-weight: 300;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px; /* espaço entre o checkbox e o texto */
-  cursor: pointer;
-  user-select: none;
-  margin-top: 5px;
-}
-
-.mostrar-senha input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
 }
 .Esqueceu {
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 300;
+}
+.Esqueceu2 {
+  margin-top: -15px;
   text-align: center;
   text-decoration: none;
   color: #000000;
@@ -263,7 +255,7 @@ button:hover {
   color: #ffffff;
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 25px 0;
   border: none;
   border-radius: 4px;
   box-sizing: border-box;
@@ -278,7 +270,7 @@ button:hover {
   background-color: #2979c4;
 }
 
-/* .botoes button {
+.botoes button {
   margin-left: 10px;
 }
 .google_ft {
@@ -292,8 +284,8 @@ button:hover {
 .facebook_ft {
   position: relative;
   bottom: -4.2px;
-} */
-.paralogin {
+}
+.Cadastre-se {
   color: #2979c4;
   font-weight: 500;
   text-decoration: none;
@@ -309,19 +301,12 @@ button:hover {
       margin: 0;
       padding: 0;
 }
-.container{
-width: 350px;
-  margin: 30px;
-  margin-top: -0px;
-  padding-top: 10px;
-  border-radius: 5px;
-}
 .botoes {
   color: #ffffff;
   width: 100%;
   font-size: 18px;
   padding: 10px;
-  margin: 10px 0;
+  margin: 25px 0;
   border: none;
   border-radius: 4px;
   box-sizing: border-box;
@@ -336,11 +321,11 @@ width: 350px;
 input[type="password"],
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="number"] {
   color: #000000;
   width: 100%;
   padding: 20px;
-  margin: 6px 0;
+  margin: 15px 0;
   border-bottom: 1px solid #242424;
   border-left: 0px;
   border-right: 0px;
@@ -351,11 +336,11 @@ input[type="tel"] {
 input[type="password"]::placeholder,
 input[type="email"]::placeholder,
 input[type="text"]::placeholder,
-input[type="tel"]::placeholder {
+input[type="number"]::placeholder {
   text-align: left;
   position: absolute;
   left: 3px;
-  font-size: 18px;
+  font-size: 20px;
   color: #535353;
 }
 .mostrar {
@@ -367,7 +352,18 @@ input[type="tel"]::placeholder {
   text-align: center;
   text-decoration: none;
   color: #000000;
-  font-size: 15px;
+  font-size: 14px;
+  margin-left: 4px;
   font-weight: 300;
 }
+.Esqueceu2 {
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+  margin-top: -30px;
+  margin-left: 4px;
+  font-weight: 300;
+}
+
   }

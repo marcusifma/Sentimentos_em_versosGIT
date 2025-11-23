@@ -166,10 +166,10 @@ header {
 }
 
  .carrossel{
-    width: 100%;
-    height: 260px;
-    position: relative;
-    overflow: hidden;
+    width:100%;
+    height:200px;
+    position:relative;
+    overflow:hidden;
     background:#000;
   }
 
@@ -278,17 +278,36 @@ header {
   position: relative;
   right: 30px;
 }
-.cordel_comprar {
+.add-cart {
   font-weight: 500;
   font-size: 16px;
   color: rgb(255, 255, 255);
   background-color: #3c5dab;
   border-radius: 5px;
-  padding: 5px;
+  border: none;
+  padding:  5px;
+  padding-left: 40px;
+   padding-right: 40px;
   position: relative;
   margin-top: 8px;
   right: 30px;
 }
+.add-cart:hover {
+  transition: 0.6s;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  background-color: #2e4b8d;
+  border-radius: 5px;
+  border: none;
+  padding:  5px;
+  padding-left: 40px;
+   padding-right: 40px;
+  position: relative;
+  margin-top: 8px;
+  right: 30px;
+}
+
 /* footer {
   margin-top: 600px;
   background-color: #66666666;
@@ -595,6 +614,32 @@ right: 120px;
       color:#000000;
     }
 
+.popup-carrinho {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4CAF50;
+  color: white;
+  padding: 15px 22px;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .4s ease;
+  z-index: 9999;
+}
+
+.popup-carrinho.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden { display: none; }
+
       @media (max-width: 1400px) {
       .logo_link{
   top: 0px;
@@ -618,31 +663,4 @@ right: 120px;
     margin-right: 10px;
   width: 95px;
 }
- .carrossel{
-    width: 100%;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    background:#000;
-  }
-    }
-     @media (max-width: 1700px) {
- .carrossel{
-    width: 100%;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    background:#000;
-  }
-    }
-    
-        
-     @media (max-width: 1800px) {
- .carrossel{
-    width: 100%;
-    height: 230px;
-    position: relative;
-    overflow: hidden;
-    background:#000;
-  }
     }
