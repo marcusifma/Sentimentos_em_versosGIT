@@ -185,6 +185,9 @@ function renderCarrinho() {
       </div>
 
       <div class="title">${produto.name}</div>
+      
+      <div class="price-item">R$ ${produto.price.toFixed(2).replace(".", ",")}</div>
+
 
       <div class="controls">
         <div class="qty">
